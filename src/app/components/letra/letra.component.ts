@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class LetraComponent {
  @Input() letra: string = '';
+ public miLetra: string = '';
 }

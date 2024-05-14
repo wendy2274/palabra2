@@ -1,3 +1,8 @@
 <div class="palabra">
-<app-letra *ngFor="let letra  of letras" [letra]="letra"></app-letra>
+ <ng-container *ngIf="turno==cont">
+  <app-letra *ngFor="let letra  of letras" [letra]="letra"></app-letra>
+  </ng-container>
+  <ng-container *ngIf="turno!=cont">
+     <input  *ngFor="let letra  of letras" type="text"  disabled /> 
+ </ng-container>
 </div>

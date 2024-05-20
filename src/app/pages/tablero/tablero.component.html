@@ -1,2 +1,14 @@
-<app-palabra *ngFor="let item of iteracion; index as i" [palabra]="palabra" [cont]="i" [turno]="turno"></app-palabra>
-<button (click)="turno=turno+1"> enviar</button>
+<div class="difficulty-selection">
+    <button (click)="setDifficulty(1)">Fácil</button>
+    <button (click)="setDifficulty(2)">Normal</button>
+    <button (click)="setDifficulty(3)">Difícil</button>
+  </div>
+  <div class="tablero">
+    <app-palabra
+      *ngFor="let item of iteracion; index as i"
+      [palabra]="palabra"
+      [cont]="i"
+      [turno]="turno"
+    ></app-palabra>
+  </div>
+  <button (click)="turno=turno+1">enviar</button>

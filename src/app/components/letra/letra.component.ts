@@ -6,11 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./letra.component.sass']
 })
 export class LetraComponent {
- @Input() letra: string = '';
- public miLetra: string = '';
- letraCambiada(): void {
-  if (this.miLetra.length > 1) {
-    this.miLetra = this.miLetra.slice(0, 1);
+  @Input() letra: string = '';
+  miLetra: string = '';
+
+  letraCambiada(): void {
+    if (this.miLetra.length > 1) {
+      this.miLetra = this.miLetra.slice(0, 1);
+    }
   }
-}
 }
